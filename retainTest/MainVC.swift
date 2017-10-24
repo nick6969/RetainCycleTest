@@ -54,6 +54,7 @@ extension TableVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! BlockCell
         cell.textLabel?.text = "\(indexPath.row)"
         cell.block = {
+            // 若是註解掉 print 就會正常執行 deinit
             print(self.tableView)
         }
         return cell
